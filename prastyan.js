@@ -5,7 +5,7 @@ const chalk = require('chalk')
 const { Configuration, OpenAIApi } = require("openai")
 let setting = require('./key.json')
 
-module.exports = sansekai = async (client, m, chatUpdate, store) => {
+module.exports = prastyan = async (client, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
@@ -57,7 +57,7 @@ module.exports = sansekai = async (client, m, chatUpdate, store) => {
     if (setting.autoAI) {
         if (budy) {
             try {
-            if (setting.keyopenai === 'ISI_APIKEY_OPENAI_DISINI') return reply('Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys')
+            if (setting.keyopenai === ('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') return reply('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')
             const configuration = new Configuration({
               apiKey: setting.keyopenai, 
             });
@@ -85,7 +85,7 @@ module.exports = sansekai = async (client, m, chatUpdate, store) => {
             switch(command) { 
                 case 'ai':
                     try {
-                        if (setting.keyopenai === 'ISI_APIKEY_OPENAI_DISINI') return reply('Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys')
+                        if (setting.keyopenai === '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') return reply('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')
                         if (!text) return reply(`Chat dengan AI.\n\nContoh:\n${prefix}${command} Apa itu resesi`)
                         const configuration = new Configuration({
                             apiKey: setting.keyopenai,

@@ -1,1 +1,1 @@
-terimakasih untuk scripnya sehat selal
+terimakasih untuk scripnya sehat selalu
