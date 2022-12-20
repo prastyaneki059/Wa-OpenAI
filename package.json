@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sansekai/Wa-OpenAI.git"
+    "url": "http+https://github.com/prastyaneki059/Wa-OpenAI.git"
   },
   "bugs": {
     "url": "https://github.com/Sansekai/Wa-OpenAI/issues"
